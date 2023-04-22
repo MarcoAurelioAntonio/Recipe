@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.2.1'
+ruby '~> 3.0'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
@@ -51,6 +51,8 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -76,3 +78,17 @@ gem 'dotenv-rails', '~> 2.8', '>= 2.8.1'
 
 # Rubocop
 gem 'rubocop', '>= 1.0', '< 2.0'
+
+# Add Devise gem for authentication management
+gem 'devise'
+
+# Adding letter_opener gem for email testing
+gem 'letter_opener'
+
+# Adding CanCanCan gem for authorization management
+gem 'cancancan'
+
+# Addind faker gem for fake data
+gem 'faker'
+# Add Devise Guests gem for guest user management
+gem 'devise-guests'
