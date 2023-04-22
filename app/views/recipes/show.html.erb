@@ -1,14 +1,20 @@
 <p style="color: green"><%= notice %></p>
+<div class="general-container">
   <%= render partial: "recipe", locals: {recipe_display: 'details', recipe: @recipe} %>
 
+  <div class="actions container-actions">
+    <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
+    <%= link_to "Back to recipes", recipes_path %>
+  </div>
 <div>
-  <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
-  <%= link_to "Back to recipes", recipes_path %>
 
-  <button data-micromodal-trigger="modal-1" type="button">Generate</button>
-  <%= button_to "Add ingredient", new_recipe_recipe_food_path(@recipe), method: :get %>
+  <button data-micromodal-trigger="modal-1" type="button" class='add-food-new'>Generate</button>
+<div>
+
+
+  <%= button_to "Add ingredient", new_recipe_recipe_food_path(@recipe), method: :get, class: 'add-food-new' %>
   <hr>
-  <table id = "ingredients">
+  <table id = "foods">
     <thead>
       <tr>
         <th>Food</th>

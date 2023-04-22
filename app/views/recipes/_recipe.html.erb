@@ -1,4 +1,4 @@
-<div id="<%= dom_id recipe %>">
+<div id="recipe">
   <% if recipe_display == 'public' %>
     <p>
       <strong>Name:</strong>
@@ -64,6 +64,6 @@
     </p>
   <% end %>
   <p>
-    <%= link_to "Show this recipe", recipe %>
+    <%= link_to "Show this recipe", recipe, class: 'show-recipe' %>
   </p>
 </div>
